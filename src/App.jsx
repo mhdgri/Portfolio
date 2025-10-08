@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import SkipLink from "./components/SkipLink";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skills from "./pages/Skills"
 import Journey from "./pages/Journey";
 import Projects from "./pages/Projects";
 import TodoApp from "./pages/TodoApp";
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/todo" element={<TodoApp />} />

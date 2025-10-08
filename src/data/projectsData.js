@@ -38,10 +38,8 @@ export const projectsData = [
       "Interface responsive testée sur mobile, tablette et desktop",
       "Code source propre et bien structuré avec composants réutilisables",
       "Déploiement réussi sur Vercel avec CI/CD",
-      "Score Lighthouse : Performance 95+, Accessibilité 90+",
       "Zéro erreur console, navigation fluide"
     ],
-    
     improvements: [
       "Ajouter des tests unitaires avec Jest et React Testing Library",
       "Implémenter un système de gestion des transactions bancaires",

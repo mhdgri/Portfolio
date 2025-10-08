@@ -27,6 +27,7 @@ export default function Navbar() {
   const navItems = [
     { to: "/", label: "Accueil" },
     { to: "/about", label: "À propos" },
+    { to: "/skills", label: "Compétences" },
     { to: "/journey", label: "Parcours" },
     { to: "/projects", label: "Projets" },
     { to: "/contact", label: "Contact" },
