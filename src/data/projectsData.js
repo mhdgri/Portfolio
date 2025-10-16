@@ -5,10 +5,10 @@ export const projectsData = [
     id: "argentbank",
     title: "ArgentBank",
     shortDescription: "Application bancaire en React et Redux Toolkit avec authentification JWT et gestion du profil utilisateur.",
-    image: "/images/argentbank.webp",
+    image: "src/assets/argentbank.webp",
     techs: ["React", "Redux Toolkit", "CSS", "JWT", "API REST"],
     codeLink: "https://github.com/mhdgri/ArgentBank-Frontend/tree/project-11/react-implementation",
-    demoLink: "https://argentbank.vercel.app",
+    demoLink: "https://argent-bank-frontend-fu61domkq-guerrouis-projects-7afb0b61.vercel.app/",
     
     // Sections détaillées
     context: "ArgentBank est une application bancaire moderne développée dans le cadre de ma formation. L'entreprise fictive souhaitait migrer son système legacy vers une solution React moderne avec une authentification sécurisée. Le projet visait à créer une expérience utilisateur fluide permettant aux clients de consulter et gérer leur profil bancaire en ligne.",
@@ -54,10 +54,10 @@ export const projectsData = [
     id: "sophie-bluel",
     title: "Sophie Bluel",
     shortDescription: "Portfolio d'architecte intégrant une galerie dynamique et une interface admin pour gérer les travaux.",
-    image: "/images/sophiebluel.webp",
+    image: "src/assets/sophiebluel.webp",
     techs: ["HTML5", "CSS3", "JavaScript Vanilla", "API REST"],
     codeLink: "https://github.com/mhdgri/Portfolio-architecte-sophie-bluel",
-    demoLink: "https://sophie-bluel-architect.vercel.app/",
+    demoLink: "https://sophie-bluel-frontend.vercel.app/",
     
     context: "Projet de création d'un portfolio pour une architecte d'intérieur fictive, Sophie Bluel. Le site devait présenter ses travaux de manière élégante tout en permettant à l'architecte de gérer son contenu via une interface d'administration. Ce projet m'a permis de travailler en JavaScript Vanilla sans framework, renforçant ainsi ma compréhension des fondamentaux du web.",
     
@@ -105,9 +105,9 @@ export const projectsData = [
     id: "todo-react",
     title: "To-Do List React",
     shortDescription: "Application personnelle de gestion de tâches en React avec filtres et persistance via localStorage.",
-    image: "/images/todolist.png",
+    image: "src/assets/todolist.png",
     techs: ["React", "Vite", "CSS", "localStorage"],
-    codeLink: "https://github.com/mhdgri/todo-react",
+    codeLink: "https://github.com/mhdgri/Portfolio/blob/Projet-12/Portfolio/src/pages/TodoApp.jsx",
     demoLink: "/todo",
     
     context: "Projet personnel développé pour approfondir ma maîtrise de React et des hooks. J'ai voulu créer un outil pratique que j'utilise quotidiennement pour gérer mes tâches de développement. Ce projet m'a permis d'expérimenter avec la persistance des données côté client et d'améliorer mon approche du state management.",
