@@ -28,6 +28,10 @@ export default function SEO({ title, description, canonical }) {
     const siteName = "Portfolio – Mohamed Guerroui";
     const fullTitle = title ? `${title} | ${siteName}` : siteName;
 
+    // Domaine courant 
+    const origin = window.location.origin;
+    const base = origin.endsWith("/") ? origin : `${origin}/`;
+
     // Title
     const prevTitle = document.title;
     document.title = fullTitle;
@@ -40,25 +44,26 @@ export default function SEO({ title, description, canonical }) {
     }
 
     // Canonical
-    const base = "https://ton-portfolio.vercel.app";
-    const url = canonical ? `${base}${canonical}` : base;
+    const cleanCanonical = canonical ? canonical.replace(/^\/+/, "") : "";
+    const url = `${base}${cleanCanonical}`;
     upsertLink("canonical", url);
 
     // OpenGraph / Twitter
+    const ogImage = `${base}og-cover.png`;
+    upsertMeta("property", "og:site_name", siteName);
     upsertMeta("property", "og:title", fullTitle);
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:url", url);
-    upsertMeta("property", "og:image", "/og-cover.png");
+    upsertMeta("property", "og:image", ogImage);
 
     upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:title", fullTitle);
-    upsertMeta("name", "twitter:image", "/og-cover.png");
+    upsertMeta("name", "twitter:image", ogImage);
 
-    // Cleanup title on unmount (facultatif)
     return () => {
       document.title = prevTitle || siteName;
     };
   }, [title, description, canonical]);
 
-  return null; // rien à rendre, on agit sur le <head>
+  return null;
 }
