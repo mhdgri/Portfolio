@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 
@@ -32,7 +31,7 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
-            className="space-y-6 text-gray-700 text-lg leading-relaxed"
+            className="space-y-6 text-gray-700 text-lg leading-relaxed md:text-justify [hyphens:auto]"
           >
             <motion.p variants={item}>
               Bonjour, je m’appelle{" "}
