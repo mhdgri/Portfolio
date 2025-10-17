@@ -48,7 +48,10 @@ export default function ProjectCard({
         {/* Tech stack */}
         <div className="flex gap-2 mb-4 flex-wrap">
           {techs.slice(0, 3).map((tech, i) => (
-            <span key={i} className="text-sm bg-gray-100 px-2 py-1 rounded-md text-gray-700">
+            <span
+              key={i}
+              className="text-sm bg-gray-100 px-2 py-1 rounded-md text-gray-700"
+            >
               {tech}
             </span>
           ))}
@@ -77,16 +80,24 @@ export default function ProjectCard({
           >
             Code
           </a>
-          {demoLink && (
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
-            >
-              Démo
-            </a>
-          )}
+          {demoLink &&
+            (demoLink.startsWith("/") ? (
+              <Link
+                to={demoLink}
+                className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
+              >
+                Démo
+              </Link>
+            ) : (
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
+              >
+                Démo
+              </a>
+            ))}
         </div>
       </div>
     </motion.article>
