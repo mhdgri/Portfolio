@@ -8,7 +8,12 @@ const container = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", when: "beforeChildren", staggerChildren: 0.08 },
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      when: "beforeChildren",
+      staggerChildren: 0.08,
+    },
   },
 };
 
@@ -32,32 +37,54 @@ export default function Home() {
           animate="show"
           className="text-center max-w-3xl"
         >
-          <motion.h1 variants={item} className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">
-            Bonjour, je suis <span className="text-blue-600">Mohamed Guerroui</span>
+          <motion.h1
+            variants={item}
+            className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4"
+          >
+            Bonjour, je suis{" "}
+            <span className="text-blue-600">Mohamed Guerroui</span>
           </motion.h1>
 
-          <motion.h2 variants={item} className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
+          <motion.h2
+            variants={item}
+            className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6"
+          >
             Développeur Web Junior — Front-End React
           </motion.h2>
 
-          <motion.p variants={item} className="text-lg md:text-xl text-gray-600 mb-8">
-            Passionné par la création d'interfaces modernes, accessibles et performantes,
-            je conçois des applications web responsives avec React, Redux et CSS.
+          <motion.p
+            variants={item}
+            className="text-lg md:text-xl text-gray-600 mb-8"
+          >
+            Passionné par la création d'interfaces modernes, accessibles et
+            performantes, je conçois des applications web responsives avec
+            React, Redux et CSS.
           </motion.p>
 
-          <motion.div variants={item} className="flex justify-center gap-4">
-            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+          <motion.div
+            variants={item}
+            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4"
+          >
+            <motion.div
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto"
+            >
               <Link
                 to="/projects"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 transition"
+                className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 transition text-center block"
               >
                 Voir mes projets
               </Link>
             </motion.div>
-            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+            <motion.div
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto"
+            >
               <Link
                 to="/contact"
-                className="px-6 py-3 bg-gray-200 text-gray-900 rounded-lg text-lg font-medium hover:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition"
+                className="w-full sm:w-auto px-6 py-3 bg-gray-200 text-gray-900 rounded-lg text-lg font-medium hover:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition text-center block"
               >
                 Me contacter
               </Link>
