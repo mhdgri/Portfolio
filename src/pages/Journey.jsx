@@ -31,7 +31,6 @@ const projectsTimeline = [
   {
     title: "Créez une application web de location immobilière avec React",
     status: "Validé",
-    duration: "60h",
     description:
       "Développement de Kasa : plateforme de location avec React Router, composants réutilisables et animations fluides.",
     skills: ["React", "React Router", "SCSS", "Composants", "Props"],
