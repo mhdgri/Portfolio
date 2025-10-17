@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-mguerroui.vercel.app/sitemap.xml
