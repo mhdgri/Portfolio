@@ -84,6 +84,7 @@ export default function Navbar() {
           aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
+          id="primary-navigation"
         >
           <span className="inline-flex items-center justify-center w-6 h-6">
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}

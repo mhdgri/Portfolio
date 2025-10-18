@@ -30,7 +30,6 @@ const projectsTimeline = [
   },
   {
     title: "Créez une application web de location immobilière avec React",
-    status: "Validé",
     description:
       "Développement de Kasa : plateforme de location avec React Router, composants réutilisables et animations fluides.",
     skills: ["React", "React Router", "SCSS", "Composants", "Props"],
@@ -100,7 +99,7 @@ export default function Journey() {
         canonical="/journey"
       />
 
-      <section className="py-16 px-6 bg-white min-h-screen">
+      <main id="main-content" role="main" className="py-16 px-6 bg-white min-h-screen">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -181,7 +180,7 @@ export default function Journey() {
             </div>
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 }

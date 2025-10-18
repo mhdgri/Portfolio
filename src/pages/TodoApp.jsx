@@ -52,17 +52,20 @@ export default function TodoApp() {
   };
 
   return (
-    <section className="py-16 px-6 bg-gray-50 min-h-screen">
+    <main id="main-content" role="main" className="py-16 px-6 bg-gray-50 min-h-screen">
       <SEO
         title="Projet personnel – To-Do List React"
         description="Application To-Do List développée en React avec persistance locale."
         canonical="/todo"
       />
       <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-md">
-        <h2 className="text-3xl font-bold mb-6 text-center">📝 Ma To-Do List</h2>
+        <h1 className="text-3xl font-bold mb-6 text-center">📝 Ma To-Do List</h1>
 
-        <form onSubmit={addTask} className="flex gap-2 mb-6">
+        <form onSubmit={addTask} className="flex gap-2 mb-6" aria-labelledby="todo-form-title">
+          <h2 id="todo-form-title" className="sr-only">Ajouter une tâche</h2>
+          <label htmlFor="new-task" className="sr-only">Nouvelle tâche</label>
           <input
+            id="new-task"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -72,6 +75,7 @@ export default function TodoApp() {
           <button
             type="submit"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            aria-label="Ajouter la tâche"
           >
             Ajouter
           </button>
@@ -79,7 +83,7 @@ export default function TodoApp() {
 
         <ul className="space-y-3">
           {tasks.length === 0 && (
-            <p className="text-gray-500 text-center">Aucune tâche pour l'instant 🙂</p>
+            <p className="text-gray-500 text-center" role="status" aria-live="polite">Aucune tâche pour l'instant 🙂</p>
           )}
           {tasks.map((task, index) => (
             <li
@@ -89,7 +93,9 @@ export default function TodoApp() {
               {editingIndex === index ? (
                 // Mode édition
                 <>
+                <label htmlFor={`edit-${index}`} className="sr-only">Modifier la tâche</label>
                   <input
+                  id={`edit-${index}`}
                     type="text"
                     value={editingText}
                     onChange={(e) => setEditingText(e.target.value)}
@@ -100,12 +106,14 @@ export default function TodoApp() {
                     <button
                       onClick={() => saveEdit(index)}
                       className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition text-sm"
+                      aria-label="Valider la modification"
                     >
                       ✓
                     </button>
                     <button
                       onClick={cancelEdit}
                       className="px-3 py-1 bg-gray-400 text-white rounded hover:bg-gray-500 transition text-sm"
+                      aria-label="Annuler l’édition"
                     >
                       ✕
                     </button>
@@ -114,26 +122,21 @@ export default function TodoApp() {
               ) : (
                 // Mode affichage
                 <>
-                  <span
-                    onClick={() => toggleTask(index)}
-                    className={`cursor-pointer flex-grow ${
-                      task.done ? "line-through text-gray-400" : ""
-                    }`}
-                  >
+<button type="button" onClick={() => toggleTask(index)} className={`text-left flex-grow ${task.done ? "line-through text-gray-400" : ""}`} aria-pressed={task.done} aria-label={task.done ? "Marquer la tâche comme non terminée" : "Marquer la tâche comme terminée"}>
                     {task.text}
-                  </span>
+                  </button>
                   <div className="flex gap-2 ml-4">
                     <button
                       onClick={() => startEditing(index, task.text)}
                       className="text-blue-500 hover:text-blue-700 transition"
-                      title="Modifier"
+                      aria-label="Modifier la tâche"
                     >
                       ✏️
                     </button>
                     <button
                       onClick={() => deleteTask(index)}
                       className="text-red-500 hover:text-red-700 transition"
-                      title="Supprimer"
+                      aria-label="Supprimer la tâche"
                     >
                       ✖
                     </button>
@@ -144,6 +147,6 @@ export default function TodoApp() {
           ))}
         </ul>
       </div>
-    </section>
+    </main>
   );
 }

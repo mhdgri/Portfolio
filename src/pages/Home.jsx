@@ -30,7 +30,7 @@ export default function Home() {
         description="Portfolio de Mohamed Guerroui, développeur web Front-End junior spécialisé en React, Redux et Tailwind CSS. Projets : ArgentBank, Sophie Bluel, To-Do List."
         canonical="/"
       />
-      <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-white px-6">
+      <main id="main-content" role="main" className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-white px-6">
         <motion.div
           variants={container}
           initial="hidden"
@@ -91,7 +91,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </motion.div>
-      </section>
+      </main>
     </>
   );
 }
