@@ -19,7 +19,7 @@ function App() {
       <SkipLink />
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main id="main" className="flex-grow pt-16">
+        <div id="main" className="flex-grow pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -31,7 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
+        </div>
         <Footer />
       </div>
     </Router>
