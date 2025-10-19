@@ -110,7 +110,7 @@ function SkillCard({ skill }) {
 
 export default function Skills() {
   return (
-    <section className="py-16 px-6 bg-white min-h-screen">
+    <main id="main-content" role="main" className="py-16 px-6 bg-white min-h-screen">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -214,6 +214,6 @@ export default function Skills() {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </main>
   );
 }

@@ -56,6 +56,7 @@ export default function Navbar() {
       ].join(" ")}
       role="navigation"
       aria-label="Navigation principale"
+      aria-current="page"
     >
       {/* Progress bar */}
       <motion.div

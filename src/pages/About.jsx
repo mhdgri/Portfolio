@@ -15,7 +15,7 @@ export default function About() {
         canonical="/about"
       />
 
-      <section className="py-16 px-6 bg-white min-h-screen">
+      <main id="main-content" role="main" className="py-16 px-6 bg-white min-h-screen">
         <div className="max-w-5xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function About() {
             </motion.p>
           </motion.div>
         </div>
-      </section>
+      </main>
     </>
   );
 }

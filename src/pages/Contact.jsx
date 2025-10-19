@@ -42,7 +42,7 @@ export default function Contact() {
         description="Contactez Mohamed Guerroui pour discuter d'opportunités professionnelles, de projets web ou pour toute collaboration en développement Front-End React."
         canonical="/contact"
       />
-      <section id="main-content" role="main" className="py-16 px-6 bg-gray-50 min-h-screen">
+      <main id="main-content" role="main" className="py-16 px-6 bg-gray-50 min-h-screen">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -177,7 +177,7 @@ export default function Contact() {
             </motion.a>
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 }
