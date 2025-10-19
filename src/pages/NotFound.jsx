@@ -3,7 +3,7 @@ import SEO from "../components/SEO.jsx";
 
 export default function NotFound() {
   return (
-    <section className="py-20 text-center">
+    <main id="main-content" role="main" className="py-20 text-center">
       <SEO
         title="Page introuvable"
         description="La page que vous cherchez n'existe pas ou a été déplacée."
@@ -17,6 +17,6 @@ export default function NotFound() {
       >
         Retour à l’accueil
       </a>
-    </section>
+    </main>
   );
 }

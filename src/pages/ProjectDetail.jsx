@@ -27,8 +27,8 @@ export default function ProjectDetail() {
         canonical={`/projects/${project.id}`}
       />
       
-      <article className="py-16 px-6 bg-white min-h-screen">
-        <div className="max-w-4xl mx-auto">
+      <main id="main-content" role="main" className="py-16 px-6 bg-white min-h-screen">
+        <article className="max-w-4xl mx-auto">
           {/* Bouton retour */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -160,8 +160,8 @@ export default function ProjectDetail() {
               <FaArrowLeft /> Voir tous mes projets
             </Link>
           </motion.div>
-        </div>
-      </article>
+        </article>
+      </main>
     </>
   );
 }

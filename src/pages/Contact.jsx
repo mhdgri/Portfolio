@@ -42,9 +42,9 @@ export default function Contact() {
         description="Contactez Mohamed Guerroui pour discuter d'opportunités professionnelles, de projets web ou pour toute collaboration en développement Front-End React."
         canonical="/contact"
       />
-      <section id="contact" className="py-16 px-6 bg-gray-50 min-h-screen">
+      <main id="main-content" role="main" className="py-16 px-6 bg-gray-50 min-h-screen">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function Contact() {
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Me contacter
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -73,12 +73,15 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
+            aria-labelledby="contact-title"
             className="bg-white shadow-md rounded-2xl p-8 space-y-6 text-left"
           >
+            <h2 id="contact-title" className="sr-only">Formulaire de contact</h2>
             {/* Message de succès */}
             {status === "success" && (
               <div
-                role="alert"
+                role="status"
+                aria-live="polite"
                 className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
               >
                 Merci ! Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.
@@ -89,6 +92,7 @@ export default function Contact() {
             {status === "error" && (
               <div
                 role="alert"
+                aria-live="assertive"
                 className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg"
               >
                 Une erreur s'est produite. Veuillez réessayer ou me contacter directement via LinkedIn.
@@ -103,10 +107,10 @@ export default function Contact() {
                 id="name"
                 type="text"
                 name="name"
-                required
+                autoComplete="name"
                 disabled={status === "sending"}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
-                aria-required="true"
+                aria-required="true" required
               />
             </div>
 
@@ -118,10 +122,10 @@ export default function Contact() {
                 id="email"
                 type="email"
                 name="email"
-                required
+                autoComplete="email"
                 disabled={status === "sending"}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
-                aria-required="true"
+                aria-required="true" required
               />
             </div>
 
@@ -133,10 +137,9 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows="5"
-                required
                 disabled={status === "sending"}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
-                aria-required="true"
+                aria-required="true" required
               />
             </div>
 
@@ -174,7 +177,7 @@ export default function Contact() {
             </motion.a>
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 }
