@@ -18,23 +18,34 @@ const technicalSkills = [
   {
     category: "Frontend",
     skills: [
-      { name: "HTML5", icon: "html5", color: "E34F26" },
-      { name: "CSS3", icon: "css3", color: "1572B6" },
-      { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
       { name: "React", icon: "react", color: "61DAFB" },
       { name: "Redux", icon: "redux", color: "764ABC" },
       { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
+      { name: "SCSS", icon: "sass", color: "CC6699" },
+      { name: "Framer Motion", icon: "framer", color: "0055FF" },
+      { name: "JavaScript", icon: "javascript", color: "F7DF1E" },
+      { name: "HTML5", icon: "html5", color: "E34F26" },
+      { name: "CSS3", icon: "css3", color: "1572B6" },
+    ],
+  },
+  {
+    category: "Backend & API",
+    skills: [
+      { name: "MongoDB", icon: "mongodb", color: "47A248" },
+      { name: "Swagger", icon: "swagger", color: "85EA2D" },
     ],
   },
   {
     category: "Outils & Workflow",
     skills: [
+      { name: "VS Code", icon: "visualstudiocode", color: "007ACC" },
       { name: "Git", icon: "git", color: "F05032" },
       { name: "GitHub", icon: "github", color: "181717" },
-      { name: "VS Code", icon: "visualstudiocode", color: "007ACC" },
       { name: "Vite", icon: "vite", color: "646CFF" },
       { name: "npm", icon: "npm", color: "CB3837" },
       { name: "Postman", icon: "postman", color: "FF6C37" },
+      { name: "Figma", icon: "figma", color: "F24E1E" },
+      { name: "Vercel", icon: "vercel", color: "000000" },
     ],
   },
 ];
@@ -110,7 +121,11 @@ function SkillCard({ skill }) {
 
 export default function Skills() {
   return (
-    <main id="main-content" role="main" className="py-16 px-6 bg-white min-h-screen">
+    <main
+      id="main-content"
+      role="main"
+      className="py-16 px-6 bg-white min-h-screen"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
