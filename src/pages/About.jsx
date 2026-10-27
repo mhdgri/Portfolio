@@ -13,7 +13,7 @@ export default function About() {
     <>
       <SEO
         title="À propos"
-        description="Mohamed Guerroui : développeur front-end React en évolution vers la gestion de projet digital, avec une expérience terrain au contact du public."
+        description="Mohamed Guerroui : formé au développement web, en évolution vers la gestion de projet digital, avec une expérience terrain au contact du public."
         canonical="/about"
       />
 
@@ -37,8 +37,8 @@ export default function About() {
           >
             <motion.p variants={item}>
               Bonjour, je m’appelle{" "}
-              <span className="text-blue-600 font-semibold">Mohamed Guerroui</span>. Développeur
-              front-end de formation, j’évolue aujourd’hui vers la{" "}
+              <span className="text-blue-600 font-semibold">Mohamed Guerroui</span>. Diplômé
+              développeur intégrateur web, j’évolue aujourd’hui vers la{" "}
               <strong>gestion de projet digital</strong> : mon objectif est de faire le lien entre
               les besoins des utilisateurs, les enjeux métier et l’équipe technique. Je viens de
               commencer une formation <strong>Chef de projet digital</strong>, en démarrant par
@@ -54,7 +54,7 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={item}>
-              Diplômé <strong>Développeur Intégrateur Web</strong> (OpenClassrooms), je maîtrise{" "}
+              Grâce à mon titre de <strong>Développeur Intégrateur Web</strong> (OpenClassrooms), je maîtrise{" "}
               <strong>React</strong>, <strong>Redux Toolkit</strong>, <strong>JavaScript</strong>,
               HTML/CSS et Tailwind. Des projets comme <em>ArgentBank</em> (React/Redux) ou{" "}
               <em>Sophie Bluel</em> (JavaScript Vanilla) m’ont appris à livrer des fonctionnalités

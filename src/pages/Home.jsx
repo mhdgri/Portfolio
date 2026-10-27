@@ -46,7 +46,7 @@ export default function Home() {
     <>
       <SEO
         title="Accueil"
-        description="Portfolio de Mohamed Guerroui, développeur front-end React en évolution vers la gestion de projet digital. Projets : ArgentBank, Sophie Bluel, To-Do List."
+        description="Portfolio de Mohamed Guerroui, formé au développement web, en évolution vers la gestion de projet digital. Projets : ArgentBank, Sophie Bluel, To-Do List."
         canonical="/"
       />
       <main id="main-content" role="main">
@@ -78,7 +78,7 @@ export default function Home() {
               variants={item}
               className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6"
             >
-              Développeur Front-End React · En évolution vers la gestion de projet digital
+              Formé au développement web · En évolution vers la gestion de projet digital
             </motion.p>
 
             <motion.p

@@ -44,7 +44,7 @@ function toAbsolute(urlOrPath) {
  */
 export default function SEO({
   title,
-  description = "Portfolio de Mohamed Guerroui, développeur front-end React en évolution vers la gestion de projet digital. Projets concrets, accessibilité et performance.",
+  description = "Portfolio de Mohamed Guerroui, formé au développement web, en évolution vers la gestion de projet digital. Projets concrets, accessibilité et performance.",
   canonical,
   image = "/og-cover.png",
 }) {

@@ -53,7 +53,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact"
-        description="Contactez Mohamed Guerroui pour discuter d'opportunités professionnelles, de projets web ou pour toute collaboration en développement Front-End React."
+        description="Contactez Mohamed Guerroui pour discuter d'opportunités professionnelles, de projets web ou pour toute collaboration en gestion de projet digital ou en développement web."
         canonical="/contact"
       />
       <main id="main-content" role="main" className="py-16 px-6 bg-gray-50 min-h-screen">
