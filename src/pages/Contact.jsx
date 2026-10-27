@@ -110,7 +110,7 @@ export default function Contact() {
             download
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-700 border border-blue-200 rounded-lg text-lg font-medium hover:bg-blue-50 focus:ring-2 focus:ring-blue-500 transition mb-10"
           >
-            <FiDownload aria-hidden="true" /> Télécharger mon CV (PDF)
+            <FiDownload aria-hidden="true" /> Télécharger mon CV
           </a>
 
           <motion.form
