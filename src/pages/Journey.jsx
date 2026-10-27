@@ -59,12 +59,6 @@ const projectsTimeline = [
     ],
   },
   {
-    title: "Premiers pas sur le langage JavaScript",
-    description:
-      "Apprentissage des fondamentaux de JavaScript : variables, fonctions, conditions, boucles et manipulation du DOM.",
-    skills: ["JavaScript", "Variables", "Fonctions", "DOM", "Événements"],
-  },
-  {
     title: "Améliorez l'interface d'un site mobile avec des animations CSS",
     description:
       "Intégration du site Menu Maker avec animations CSS avancées : keyframes, transitions et transformations pour améliorer l'UX mobile.",
@@ -76,18 +70,6 @@ const projectsTimeline = [
       "Intégration responsive du site Booki avec HTML5 sémantique, CSS3, Flexbox et Grid pour une compatibilité multi-devices.",
     skills: ["HTML5", "CSS3", "Flexbox", "Grid", "Responsive Design"],
   },
-  {
-    title: "Premiers pas sur le langage HTML",
-    description:
-      "Découverte du langage HTML : structure d'une page web, balises sémantiques, formulaires et bonnes pratiques.",
-    skills: ["HTML", "Sémantique", "Structure", "Balises", "Formulaires"],
-  },
-  {
-    title: "Démarrez votre formation d'intégrateur web",
-    description:
-      "Introduction au métier de développeur web : écosystème, outils, méthodologies et premiers pas dans l'environnement de développement.",
-    skills: ["Git", "GitHub", "VS Code", "Terminal", "Méthodologie"],
-  },
 ];
 
 export default function Journey() {
@@ -95,7 +77,7 @@ export default function Journey() {
     <>
       <SEO
         title="Mon Parcours"
-        description="Découvrez mon parcours de formation complet : 12 projets validés en développement web, de l'intégration HTML/CSS à React et Redux."
+        description="Les projets clés de ma formation Développeur Intégrateur Web : intégration, React, SEO, debug et planification de projet."
         canonical="/journey"
       />
 
@@ -111,9 +93,10 @@ export default function Journey() {
               Mon Parcours de Formation
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Découvrez les 12 projets que j'ai réalisés durant ma formation de
-              Développeur Web / Intégrateur Web, représentant plus de{" "}
-              <strong>540 heures</strong> de développement et d'apprentissage.
+              Les projets clés de ma formation Développeur Intégrateur Web
+              (OpenClassrooms), sur plus de <strong>540 heures</strong> de
+              pratique : de l'intégration HTML/CSS à React, en passant par le
+              SEO, le debug et la planification de projet.
             </p>
           </motion.div>
 

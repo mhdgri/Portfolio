@@ -17,7 +17,6 @@ export default function ProjectCard({
   description,
   image,
   techs,
-  codeLink,
   demoLink,
   index = 0,
 }) {
@@ -72,22 +71,13 @@ export default function ProjectCard({
 
         {/* Liens secondaires */}
         <div className="flex gap-2">
-          <a
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Voir le code source du projet ${title} sur GitHub`}
-            className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
-          >
-            Code
-          </a>
           {demoLink &&
             (demoLink.startsWith("/") ? (
               <Link
                 to={demoLink}
                 className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
               >
-                Démo
+                Voir la démo
               </Link>
             ) : (
               <a
@@ -97,7 +87,7 @@ export default function ProjectCard({
                 aria-label={`Ouvrir la démo en ligne du projet ${title}`}
                 className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition focus:ring-2 focus:ring-blue-500 text-center text-sm"
               >
-                Démo
+                Voir la démo
               </a>
             ))}
         </div>

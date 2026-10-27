@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const container = {
   hidden: { opacity: 0 },
@@ -29,13 +30,6 @@ const technicalSkills = [
     ],
   },
   {
-    category: "Backend & API",
-    skills: [
-      { name: "MongoDB", icon: "mongodb", color: "47A248" },
-      { name: "Swagger", icon: "swagger", color: "85EA2D" },
-    ],
-  },
-  {
     category: "Outils & Workflow",
     skills: [
       { name: "VS Code", icon: "visualstudiocode", color: "007ACC" },
@@ -44,45 +38,54 @@ const technicalSkills = [
       { name: "Vite", icon: "vite", color: "646CFF" },
       { name: "npm", icon: "npm", color: "CB3837" },
       { name: "Postman", icon: "postman", color: "FF6C37" },
+      { name: "Swagger", icon: "swagger", color: "85EA2D" },
       { name: "Figma", icon: "figma", color: "F24E1E" },
       { name: "Vercel", icon: "vercel", color: "000000" },
     ],
   },
 ];
 
+const methods = [
+  "UX design",
+  "Benchmark concurrentiel",
+  "Parcours utilisateur",
+  "Wireframes (Figma)",
+  "Méthode Agile",
+  "Kanban",
+  "Rédaction de spécifications",
+  "Veille technologique",
+  "Accessibilité (RGAA / WCAG)",
+  "SEO technique",
+  "Audit Lighthouse",
+];
+
 const softSkills = [
   {
     name: "Rigueur & Attention aux détails",
     description: "Code propre, respect des standards et des bonnes pratiques",
-    icon: "🎯",
   },
   {
     name: "Curiosité & Apprentissage continu",
     description:
       "Veille technologique active, exploration de nouvelles technologies",
-    icon: "🔍",
   },
   {
     name: "Autonomie",
     description: "Capacité à résoudre des problèmes de manière indépendante",
-    icon: "💪",
   },
   {
     name: "Communication",
     description:
       "Documentation claire, partage de connaissances, travail en équipe",
-    icon: "💬",
   },
   {
     name: "Adaptabilité",
     description:
       "Flexibilité face aux changements de technologies et de méthodes",
-    icon: "🔄",
   },
   {
     name: "Sens du détail UX",
     description: "Souci de l'expérience utilisateur et de l'accessibilité",
-    icon: "✨",
   },
 ];
 
@@ -121,6 +124,12 @@ function SkillCard({ skill }) {
 
 export default function Skills() {
   return (
+    <>
+    <SEO
+      title="Compétences"
+      description="Compétences de Mohamed Guerroui : React, Redux, JavaScript, Tailwind, méthodes Agile et Kanban, accessibilité et SEO."
+      canonical="/skills"
+    />
     <main
       id="main-content"
       role="main"
@@ -154,7 +163,7 @@ export default function Skills() {
             variants={item}
             className="text-2xl font-bold mb-8 text-center"
           >
-            💻 Compétences Techniques
+            Compétences techniques
           </motion.h2>
 
           <div className="space-y-12">
@@ -173,6 +182,22 @@ export default function Skills() {
           </div>
         </motion.div>
 
+        <section aria-labelledby="methodes-title" className="mb-20">
+          <h2 id="methodes-title" className="text-2xl font-bold mb-8 text-center">
+            Méthodes &amp; gestion de projet
+          </h2>
+          <ul className="flex flex-wrap justify-center gap-3">
+            {methods.map((m) => (
+              <li
+                key={m}
+                className="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 font-medium"
+              >
+                {m}
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <motion.div
           variants={container}
           initial="hidden"
@@ -183,7 +208,7 @@ export default function Skills() {
             variants={item}
             className="text-2xl font-bold mb-8 text-center"
           >
-            🌟 Soft Skills
+            Savoir-être
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -194,7 +219,6 @@ export default function Skills() {
                 whileHover={{ y: -4, scale: 1.02 }}
                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="text-4xl mb-3">{skill.icon}</div>
                 <h3 className="text-lg font-semibold mb-2 text-gray-900">
                   {skill.name}
                 </h3>
@@ -215,7 +239,7 @@ export default function Skills() {
         >
           <h3 className="text-2xl font-bold mb-4">Prêt à collaborer ?</h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            Je suis disponible pour des opportunités en CDI, stage ou freelance.
+            Je suis ouvert aux opportunités en gestion de projet digital et en développement front-end.
             N'hésitez pas à me contacter pour discuter de votre projet !
           </p>
 
@@ -230,5 +254,6 @@ export default function Skills() {
         </motion.div>
       </div>
     </main>
+    </>
   );
 }

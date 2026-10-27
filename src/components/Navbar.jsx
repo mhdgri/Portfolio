@@ -39,7 +39,7 @@ export default function Navbar() {
       onClick={onClick}
       className={({ isActive }) =>
         [
-          "px-2 py-1 transition-colors",
+          "px-2 py-1 transition-colors whitespace-nowrap",
           isActive ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600",
         ].join(" ")
       }
@@ -56,7 +56,6 @@ export default function Navbar() {
       ].join(" ")}
       role="navigation"
       aria-label="Navigation principale"
-      aria-current="page"
     >
       {/* Progress bar */}
       <motion.div
@@ -68,12 +67,12 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <Link
           to="/"
-          className="text-xl font-bold text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+          className="text-xl font-bold text-blue-600 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
         >
           Mohamed Guerroui
         </Link>
 
-        <div className="hidden md:flex gap-6 items-center">
+        <div className="hidden md:flex gap-2 lg:gap-6 items-center">
           {navItems.map((item) => (
             <NavItem key={item.to} to={item.to} label={item.label} />
           ))}

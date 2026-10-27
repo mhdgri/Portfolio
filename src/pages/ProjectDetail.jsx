@@ -1,7 +1,7 @@
 // src/pages/ProjectDetail.jsx
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import { getProjectById } from "../data/projectsData";
 import SEO from "../components/SEO";
 
@@ -61,25 +61,25 @@ export default function ProjectDetail() {
             </div>
 
             {/* Liens */}
-            <div className="flex gap-4 mb-8">
-              <a
-                href={project.codeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
-              >
-                <FaGithub /> Voir le code
-              </a>
-              {project.demoLink && (
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                >
-                  <FaExternalLinkAlt /> Démo live
-                </a>
-              )}
+            <div className="flex gap-4 mb-8 flex-wrap">
+              {project.demoLink &&
+                (project.demoLink.startsWith("/") ? (
+                  <Link
+                    to={project.demoLink}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  >
+                    <FaExternalLinkAlt /> Tester l'application
+                  </Link>
+                ) : (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  >
+                    <FaExternalLinkAlt /> Démo live
+                  </a>
+                ))}
             </div>
 
             {/* Image principale */}
@@ -93,12 +93,12 @@ export default function ProjectDetail() {
           {/* Sections détaillées */}
           <div className="space-y-12">
             {/* Contexte */}
-            <Section title="📋 Contexte" delay={0.1}>
+            <Section title="Contexte" delay={0.1}>
               <p className="text-gray-700 leading-relaxed">{project.context}</p>
             </Section>
 
             {/* Objectifs */}
-            <Section title="🎯 Objectifs" delay={0.2}>
+            <Section title="Objectifs" delay={0.2}>
               <ul className="space-y-2">
                 {project.objectives.map((obj, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -110,7 +110,7 @@ export default function ProjectDetail() {
             </Section>
 
             {/* Compétences développées */}
-            <Section title="💡 Compétences développées" delay={0.3}>
+            <Section title="Compétences développées" delay={0.3}>
               <ul className="space-y-2">
                 {project.skills.map((skill, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -122,7 +122,7 @@ export default function ProjectDetail() {
             </Section>
 
             {/* Résultats */}
-            <Section title="✨ Résultats et impact" delay={0.4}>
+            <Section title="Résultats" delay={0.4}>
               <ul className="space-y-2">
                 {project.results.map((result, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -134,7 +134,7 @@ export default function ProjectDetail() {
             </Section>
 
             {/* Perspectives d'amélioration */}
-            <Section title="🚀 Perspectives d'amélioration" delay={0.5}>
+            <Section title="Ce que j'améliorerais" delay={0.5}>
               <ul className="space-y-2">
                 {project.improvements.map((improvement, i) => (
                   <li key={i} className="flex items-start gap-3">

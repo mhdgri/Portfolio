@@ -1,11 +1,25 @@
 // src/pages/Contact.jsx
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+import { EMAIL, CV_URL, LINKEDIN_URL, GITHUB_URL } from "../config";
 import { useState } from "react";
 import SEO from "../components/SEO";
 
 export default function Contact() {
   const [status, setStatus] = useState(""); // "", "sending", "success", "error"
+  const [copied, setCopied] = useState(false);
+  const email = EMAIL;
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,8 +76,42 @@ export default function Contact() {
             className="text-gray-600 mb-12 text-lg"
           >
             Vous souhaitez échanger à propos d'une opportunité ou d'un projet ? N'hésitez pas à me contacter
-            via le formulaire ci-dessous ou mes réseaux.
+            via le formulaire ci-dessous par email ou sur LinkedIn.
           </motion.p>
+
+          <div className="grid gap-4 sm:grid-cols-2 mb-10 text-left">
+            <div className="bg-white rounded-xl border border-gray-200 p-5 flex items-start gap-3">
+              <FaEnvelope className="text-blue-600 mt-1 shrink-0" aria-hidden="true" />
+              <div className="min-w-0">
+                <p className="text-sm text-gray-500 mb-1">Email</p>
+                <a href={`mailto:${email}`} className="font-medium text-gray-900 break-all hover:text-blue-600">
+                  {email}
+                </a>
+                <button
+                  type="button"
+                  onClick={copyEmail}
+                  className="block mt-2 text-sm text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                >
+                  {copied ? "Adresse copiée" : "Copier l'adresse"}
+                </button>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-5 flex items-start gap-3">
+              <FaMapMarkerAlt className="text-blue-600 mt-1 shrink-0" aria-hidden="true" />
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Localisation</p>
+                <p className="font-medium text-gray-900">Île-de-France (Yvelines)</p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href={CV_URL}
+            download
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-700 border border-blue-200 rounded-lg text-lg font-medium hover:bg-blue-50 focus:ring-2 focus:ring-blue-500 transition mb-10"
+          >
+            <FiDownload aria-hidden="true" /> Télécharger mon CV (PDF)
+          </a>
 
           <motion.form
             action="https://formspree.io/f/mrbykwlg"
@@ -95,7 +143,7 @@ export default function Contact() {
                 aria-live="assertive"
                 className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg"
               >
-                Une erreur s'est produite. Veuillez réessayer ou me contacter directement via LinkedIn.
+                Une erreur s'est produite. Veuillez réessayer ou m'écrire directement par email.
               </div>
             )}
 
@@ -157,7 +205,7 @@ export default function Contact() {
           <div className="flex justify-center gap-6 mt-12">
             <motion.a
               whileHover={{ y: -3 }}
-              href="https://github.com/mhdgri"
+              href={GITHUB_URL}
               aria-label="Visiter le profil GitHub de Mohamed Guerroui"
               target="_blank"
               rel="noopener noreferrer"
@@ -167,7 +215,7 @@ export default function Contact() {
             </motion.a>
             <motion.a
               whileHover={{ y: -3 }}
-              href="https://linkedin.com/in/mohamed-guerroui-a27601388/"
+              href={LINKEDIN_URL}
               aria-label="Visiter le profil LinkedIn de Mohamed Guerroui"
               target="_blank"
               rel="noopener noreferrer"

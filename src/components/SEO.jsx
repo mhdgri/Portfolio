@@ -24,8 +24,8 @@ function upsertLink(rel, href) {
   el.setAttribute("href", href);
 }
 
-// Base URL du site
-const siteUrl = import.meta.env.VITE_SITE_URL ?? window.location.origin;
+// Base URL du site (domaine principal, sans slash final)
+const siteUrl = "https://www.mohamed-guerroui.fr";
 
 /* Transforme un chemin relatif en URL absolue basée sur siteUrl */
 function toAbsolute(urlOrPath) {
@@ -44,7 +44,7 @@ function toAbsolute(urlOrPath) {
  */
 export default function SEO({
   title,
-  description = "Portfolio de Mohamed Guerroui, développeur Front-End (React, Redux, Tailwind). Projets concrets, accessibilité et performance.",
+  description = "Portfolio de Mohamed Guerroui, développeur front-end React en évolution vers la gestion de projet digital. Projets concrets, accessibilité et performance.",
   canonical,
   image = "/og-cover.png",
 }) {

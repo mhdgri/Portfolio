@@ -23,7 +23,6 @@ export default function Projects() {
                 description={project.shortDescription}
                 image={project.image}
                 techs={project.techs}
-                codeLink={project.codeLink}
                 demoLink={project.demoLink}
                 index={index}
               />

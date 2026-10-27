@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 import SEO from "../components/SEO";
+import { CV_URL } from "../config";
 
 const item = {
   hidden: { opacity: 0, y: 14 },
@@ -11,7 +13,7 @@ export default function About() {
     <>
       <SEO
         title="À propos"
-        description="Découvrez mon parcours de développeur web junior, ma formation, mes compétences en React, Redux et JavaScript, et ma passion pour l'accessibilité web."
+        description="Mohamed Guerroui : développeur front-end React en évolution vers la gestion de projet digital, avec une expérience terrain au contact du public."
         canonical="/about"
       />
 
@@ -35,32 +37,43 @@ export default function About() {
           >
             <motion.p variants={item}>
               Bonjour, je m’appelle{" "}
-              <span className="text-blue-600 font-semibold">Mohamed Guerroui</span>, développeur
-              front-end junior. J’aime concevoir des interfaces modernes, accessibles et performantes,
-              avec une attention particulière portée aux détails et à l’expérience utilisateur.
+              <span className="text-blue-600 font-semibold">Mohamed Guerroui</span>. Développeur
+              front-end de formation, j’évolue aujourd’hui vers la{" "}
+              <strong>gestion de projet digital</strong> : mon objectif est de faire le lien entre
+              les besoins des utilisateurs, les enjeux métier et l’équipe technique. Je viens de
+              commencer une formation <strong>Chef de projet digital</strong>, en démarrant par
+              l’<strong>UX design</strong> : benchmark concurrentiel, parcours utilisateur et
+              wireframes.
             </motion.p>
 
             <motion.p variants={item}>
-              Après une première vie professionnelle dans un autre domaine, j’ai choisi de me
-              reconvertir vers le développement web. Ma formation m’a appris à transformer des
-              maquettes en applications fonctionnelles et à travailler proprement : structure
-              sémantique, accessibilité et bonnes pratiques.
+              Avant le web, j’ai travaillé dans le <strong>transport public</strong>, au contact
+              quotidien des voyageurs. Gérer des imprévus, appliquer des procédures exigeantes,
+              expliquer clairement une situation à des personnes pressées : ce sont des réflexes que
+              j’apporte aujourd’hui dans chaque projet.
             </motion.p>
 
             <motion.p variants={item}>
-              Je travaille au quotidien avec <strong>React</strong>, <strong>Redux Toolkit</strong> et
-              <strong> JavaScript ES6+</strong>, ainsi qu’avec <strong>HTML5</strong>, <strong>CSS3</strong> et{" "}
-              <strong>Tailwind CSS</strong> pour produire des interfaces responsives et maintenables.
-              Parmi mes projets, <em>ArgentBank</em> (React/Redux) et <em>Sophie Bluel</em> (JavaScript
-              Vanilla) illustrent ma capacité à livrer des fonctionnalités complètes et robustes.
+              Diplômé <strong>Développeur Intégrateur Web</strong> (OpenClassrooms), je maîtrise{" "}
+              <strong>React</strong>, <strong>Redux Toolkit</strong>, <strong>JavaScript</strong>,
+              HTML/CSS et Tailwind. Des projets comme <em>ArgentBank</em> (React/Redux) ou{" "}
+              <em>Sophie Bluel</em> (JavaScript Vanilla) m’ont appris à livrer des fonctionnalités
+              complètes, et le module de planification m’a formé aux méthodes{" "}
+              <strong>Agile</strong>, au <strong>Kanban</strong> et à la rédaction de spécifications.
             </motion.p>
 
             <motion.p variants={item}>
-              Curieux et rigoureux, je progresse en continu sur l’écosystème React et les standards du
-              web. Mon objectif : rejoindre une équipe où je pourrai contribuer à des produits utiles,
-              apprendre chaque jour et faire grandir la qualité du front-end.
+              Ce double profil est ma force : je sais ce qu’une fonctionnalité demande vraiment côté
+              technique, et je sais l’expliquer à ceux qui ne codent pas. Je cherche à rejoindre une
+              équipe où je pourrai cadrer, coordonner et faire avancer des produits utiles.
             </motion.p>
           </motion.div>
+
+          <div className="mt-10 text-center">
+            <a href={CV_URL} download className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-700 border border-blue-200 rounded-lg text-lg font-medium hover:bg-blue-50 focus:ring-2 focus:ring-blue-500 transition">
+              <FiDownload aria-hidden="true" /> Télécharger mon CV (PDF)
+            </a>
+          </div>
         </div>
       </main>
     </>

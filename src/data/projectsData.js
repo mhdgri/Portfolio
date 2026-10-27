@@ -7,7 +7,6 @@ export const projectsData = [
     shortDescription: "Application bancaire en React et Redux Toolkit avec authentification JWT et gestion du profil utilisateur.",
     image: "/images/argentbank.webp",
     techs: ["React", "Redux Toolkit", "CSS", "JWT", "API REST"],
-    codeLink: "https://github.com/mhdgri/ArgentBank-Frontend/tree/project-11/react-implementation",
     demoLink: "https://argent-bank-frontend-fu61domkq-guerrouis-projects-7afb0b61.vercel.app/",
     
     // Sections détaillées
@@ -33,12 +32,11 @@ export const projectsData = [
     ],
     
     results: [
-      "Application 100% fonctionnelle avec authentification sécurisée",
-      "Temps de chargement optimisé grâce à Redux Toolkit",
+      "Connexion, déconnexion et modification du profil fonctionnelles",
       "Interface responsive testée sur mobile, tablette et desktop",
       "Code source propre et bien structuré avec composants réutilisables",
-      "Déploiement réussi sur Vercel avec CI/CD",
-      "Zéro erreur console, navigation fluide"
+      "Front-end déployé sur Vercel",
+      "Projet validé dans le cadre de la formation"
     ],
     improvements: [
       "Ajouter des tests unitaires avec Jest et React Testing Library",
@@ -56,7 +54,6 @@ export const projectsData = [
     shortDescription: "Portfolio d'architecte intégrant une galerie dynamique et une interface admin pour gérer les travaux.",
     image: "/images/sophiebluel.webp",
     techs: ["HTML5", "CSS3", "JavaScript Vanilla", "API REST"],
-    codeLink: "https://github.com/mhdgri/Portfolio-architecte-sophie-bluel",
     demoLink: "https://sophie-bluel-frontend.vercel.app/",
     
     context: "Projet de création d'un portfolio pour une architecte d'intérieur fictive, Sophie Bluel. Le site devait présenter ses travaux de manière élégante tout en permettant à l'architecte de gérer son contenu via une interface d'administration. Ce projet m'a permis de travailler en JavaScript Vanilla sans framework, renforçant ainsi ma compréhension des fondamentaux du web.",
@@ -87,8 +84,7 @@ export const projectsData = [
       "Interface admin complète permettant l'ajout et la suppression de projets",
       "Upload d'images fonctionnel avec prévisualisation",
       "Code JavaScript organisé et commenté",
-      "Validation complète par le jury de la formation",
-      "Navigation accessible au clavier et lecteur d'écran"
+      "Projet validé dans le cadre de la formation"
     ],
     
     improvements: [
@@ -104,13 +100,12 @@ export const projectsData = [
   {
     id: "todo-react",
     title: "To-Do List React",
-    shortDescription: "Application personnelle de gestion de tâches en React avec filtres et persistance via localStorage.",
+    shortDescription: "Application de gestion de tâches en React : ajout, suppression, complétion et sauvegarde dans le navigateur.",
     image: "/images/todolist.webp",
     techs: ["React", "Vite", "CSS", "localStorage"],
-    codeLink: "https://github.com/mhdgri/Portfolio/blob/Projet-12/Portfolio/src/pages/TodoApp.jsx",
     demoLink: "/todo",
     
-    context: "Projet personnel développé pour approfondir ma maîtrise de React et des hooks. J'ai voulu créer un outil pratique que j'utilise quotidiennement pour gérer mes tâches de développement. Ce projet m'a permis d'expérimenter avec la persistance des données côté client et d'améliorer mon approche du state management.",
+    context: "Projet personnel développé pour approfondir ma maîtrise de React et des hooks, avec l'objectif de créer un petit outil pratique et simple. Ce projet m'a permis d'expérimenter avec la persistance des données côté client et d'améliorer mon approche du state management.",
     
     objectives: [
       "Créer une interface simple et intuitive pour gérer des tâches",
@@ -118,7 +113,7 @@ export const projectsData = [
       "Persister les données dans le localStorage",
       "Rendre l'application responsive pour mobile et desktop",
       "Appliquer les bonnes pratiques React (hooks, composants fonctionnels)",
-      "Déployer l'application en ligne"
+      "Intégrer l'application au portfolio"
     ],
     
     skills: [
@@ -135,10 +130,7 @@ export const projectsData = [
       "Application To-Do entièrement fonctionnelle et utilisable",
       "Persistance des tâches fonctionnelle (les données restent après rechargement)",
       "Interface fluide et responsive",
-      "Code propre avec composants réutilisables",
-      "Déploiement réussi sur Vercel",
-      "Temps de développement : 2 jours",
-      "Application utilisée personnellement au quotidien"
+      "Intégrée et testable directement dans ce portfolio"
     ],
     
     improvements: [
