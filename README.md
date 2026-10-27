@@ -12,7 +12,7 @@ Choix de design : j'ai volontairement gardé **un thème clair unique**, pour ma
 - **Site en ligne** : https://www.mohamed-guerroui.fr/
 - **GitHub (repo)** : https://github.com/mhdgri/portfolio
 - **Profil GitHub** : https://github.com/mhdgri
-- **LinkedIn** : https://www.linkedin.com/in/mohamed-guerroui-a27601388/
+- **LinkedIn** : https://www.linkedin.com/in/mohamedguerroui
 - **Maquette Figma** : https://www.figma.com/board/TfxFR7WGTfkBboj8omkb7J/Portfolio
 
 ---
@@ -147,4 +147,4 @@ portfolio/
 
 - Portfolio : https://portfolio-mguerroui.vercel.app
 - GitHub : https://github.com/mhdgri
-- LinkedIn : https://linkedin.com/in/mohamed-guerroui-a27601388/
+- LinkedIn : https://www.linkedin.com/in/mohamedguerroui
