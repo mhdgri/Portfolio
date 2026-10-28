@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { skillIcons } from "../data/skillIcons";
 
 const container = {
   hidden: { opacity: 0 },
@@ -112,7 +113,9 @@ function SkillCard({ skill }) {
         customIcons[skill.icon]
       ) : (
         <img
-          src={`https://cdn.simpleicons.org/${skill.icon}/${skill.color}`}
+          src={skillIcons[skill.icon]}
+          width="64"
+          height="64"
           alt={`${skill.name} logo`}
           className="w-16 h-16"
         />
@@ -154,7 +157,7 @@ export default function Skills() {
 
         <motion.div
           variants={container}
-          initial="hidden"
+          initial={false}
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
           className="mb-20"
